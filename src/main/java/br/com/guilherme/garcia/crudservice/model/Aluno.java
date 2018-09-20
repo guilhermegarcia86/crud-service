@@ -18,7 +18,7 @@ import javax.persistence.OneToMany;
 import br.com.guilherme.garcia.crudservice.model.enumeration.SerieDom;
 import br.com.guilherme.garcia.crudservice.model.enumeration.StatusDom;
 
-@Entity
+@Entity(name = "aluno")
 public class Aluno implements Serializable {
 
 	private static final long serialVersionUID = 1L;
