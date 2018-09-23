@@ -18,7 +18,7 @@ public class ComunicadoService {
 		return comunicadoRepository.findAll();
 	}
 	
-	public Comunicado addComunicado(Comunicado comunicado) {
+	public Comunicado addComunicado(Comunicado comunicado) {		
 		return comunicadoRepository.save(comunicado);
 	}
 
