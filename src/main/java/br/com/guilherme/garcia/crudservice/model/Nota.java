@@ -11,10 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import lombok.Data;
-
 @Entity(name = "nota")
-@Data
 public class Nota implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -29,5 +26,29 @@ public class Nota implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "aluno_id")
 	private Aluno aluno;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public BigDecimal getNota() {
+		return nota;
+	}
+
+	public void setNota(BigDecimal nota) {
+		this.nota = nota;
+	}
+
+	public Aluno getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(Aluno aluno) {
+		this.aluno = aluno;
+	}
 
 }

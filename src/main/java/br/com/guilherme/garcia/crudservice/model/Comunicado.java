@@ -8,10 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.Data;
-
 @Entity(name = "comunicado")
-@Data
 public class Comunicado implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -22,5 +19,21 @@ public class Comunicado implements Serializable {
 	
 	@Column
 	private String texto;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getTexto() {
+		return texto;
+	}
+
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
 
 }

@@ -10,10 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import lombok.Data;
-
 @Entity(name = "responsavel")
-@Data
 public class Responsavel implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -27,4 +24,28 @@ public class Responsavel implements Serializable {
 
 	@OneToMany(mappedBy = "responsavel")
 	private Set<Aluno> alunos;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Set<Aluno> getAlunos() {
+		return alunos;
+	}
+
+	public void setAlunos(Set<Aluno> alunos) {
+		this.alunos = alunos;
+	}
 }
