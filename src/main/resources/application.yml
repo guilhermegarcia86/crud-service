@@ -1,0 +1,5 @@
+#Com a utilização do cloud foundry muitas configurações são desacopladas
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none

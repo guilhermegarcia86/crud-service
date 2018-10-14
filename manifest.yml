@@ -2,5 +2,6 @@ applications:
 - name: crud-service-mysql
   path: target/crud-service-0.0.1-SNAPSHOT.jar
   buildpack: https://github.com/cloudfoundry/java-buildpack.git 
-  memory: 512M
+  memory: 1G
   services:  - mysql-service
+  - registry-service
