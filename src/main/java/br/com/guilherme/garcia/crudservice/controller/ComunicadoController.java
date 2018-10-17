@@ -25,7 +25,7 @@ public class ComunicadoController {
 	
 	@GetMapping("all")
 	public List<Comunicado> findAll(){
-		logger.info(">>> DEPOIS AQUI <<<<");
+		logger.info("Recebe a chamada de um microserviço");
 		return comunicadoService.findAllComunicados();
 	}
 	
