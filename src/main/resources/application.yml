@@ -1,5 +1,24 @@
-#Com a utilização do cloud foundry muitas configurações são desacopladas
+server:
+  port: 8200
+
 spring:
+  application:
+    name: crud-service-mysql
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: validate
+      format_sql: true
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/escoladb?useSSL=false
+    username: root
+    password: 1234
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka
+   
+ribbon:
+  eureka:
+    enabled: true
