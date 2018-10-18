@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.guilherme.garcia.crudservice.model.Comunicado;
-import br.com.guilherme.garcia.crudservice.repository.ComunicadoRepository;
+import br.com.guilherme.garcia.crudservice.model.comunicado.Comunicado;
+import br.com.guilherme.garcia.crudservice.repository.comunicado.ComunicadoRepository;
 
 @Service
 public class ComunicadoService {

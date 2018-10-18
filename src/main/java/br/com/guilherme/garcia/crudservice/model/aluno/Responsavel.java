@@ -1,4 +1,4 @@
-package br.com.guilherme.garcia.crudservice.model;
+package br.com.guilherme.garcia.crudservice.model.aluno;
 
 import java.io.Serializable;
 import java.util.Set;

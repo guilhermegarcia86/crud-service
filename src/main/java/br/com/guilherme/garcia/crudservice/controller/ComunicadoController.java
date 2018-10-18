@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.guilherme.garcia.crudservice.model.Comunicado;
+import br.com.guilherme.garcia.crudservice.model.comunicado.Comunicado;
 import br.com.guilherme.garcia.crudservice.service.ComunicadoService;
 
 @RestController

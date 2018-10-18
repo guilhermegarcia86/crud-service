@@ -1,4 +1,4 @@
-package br.com.guilherme.garcia.crudservice.model;
+package br.com.guilherme.garcia.crudservice.model.aluno;
 
 import java.io.Serializable;
 import java.util.Set;
@@ -15,7 +15,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import br.com.guilherme.garcia.crudservice.model.enumeration.SerieDom;
-import br.com.guilherme.garcia.crudservice.model.enumeration.StatusDom;
+import br.com.guilherme.garcia.crudservice.model.pagamento.Pagamento;
 
 @Entity(name = "aluno")
 public class Aluno implements Serializable {
@@ -37,13 +37,12 @@ public class Aluno implements Serializable {
 	@OneToMany(mappedBy = "aluno")
 	private Set<Nota> notas;
 
-	@Enumerated(EnumType.STRING)
-	@Column
-	private StatusDom status;
-
 	@ManyToOne
 	@JoinColumn(name = "reposanvel_id")
 	private Responsavel responsavel;
+	
+	@OneToMany(mappedBy = "aluno")
+	private Set<Pagamento> pagamentos;
 
 	public Long getId() {
 		return id;
@@ -77,20 +76,20 @@ public class Aluno implements Serializable {
 		this.notas = notas;
 	}
 
-	public StatusDom getStatus() {
-		return status;
-	}
-
-	public void setStatus(StatusDom status) {
-		this.status = status;
-	}
-
 	public Responsavel getResponsavel() {
 		return responsavel;
 	}
 
 	public void setResponsavel(Responsavel responsavel) {
 		this.responsavel = responsavel;
+	}
+
+	public Set<Pagamento> getPagamentos() {
+		return pagamentos;
+	}
+
+	public void setPagamentos(Set<Pagamento> pagamentos) {
+		this.pagamentos = pagamentos;
 	}
 
 }
